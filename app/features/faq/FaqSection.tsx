@@ -90,19 +90,6 @@ export default function FaqSection() {
             </Accordion>
           </motion.div>
         ))}
-
-        {/* Placeholder for future FAQs */}
-        {[1, 2, 3, 4, 5].map((num) => (
-          <motion.div key={`placeholder-${num}`} variants={fadeSlideUp}>
-            <Accordion disabled sx={{ mb: 2, opacity: 0.5 }}>
-              <AccordionSummary>
-                <Typography variant="h6" color="text.disabled">
-                  More questions coming soon...
-                </Typography>
-              </AccordionSummary>
-            </Accordion>
-          </motion.div>
-        ))}
       </motion.div>
     </Section>
   );
