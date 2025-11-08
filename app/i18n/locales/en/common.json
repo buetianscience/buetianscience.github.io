@@ -1,0 +1,129 @@
+{
+  "brand": "BUETian Science",
+  "tagline": "Learning Made Simple",
+  "coachingCenter": "Coaching Center",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "courses": "Courses & Programs",
+    "testimonials": "Testimonials",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "blog": "Blog & Resources"
+  },
+  "cta": {
+    "enrollNow": "Enroll Now",
+    "joinNow": "Join Now",
+    "seeCourses": "See Courses",
+    "callNow": "Call Now",
+    "whatsapp": "Chat on WhatsApp",
+    "getDirections": "Get Directions"
+  },
+  "hero": {
+    "headline": "For students aiming for strong conceptual mastery and who prefer understanding deeply instead of just memorizing.",
+    "chips": ["#Personal Care", "#Mock Tests", "#Increase Analytical Skills"]
+  },
+  "home": {
+    "valueTiles": {
+      "buetianTeachers": {
+        "title": "BUETian Teachers",
+        "description": "Learn from experienced BUET graduates"
+      },
+      "conceptFirst": {
+        "title": "Concept First",
+        "description": "Deep understanding over rote memorization"
+      },
+      "mockTests": {
+        "title": "Regular Mock Tests",
+        "description": "Frequent assessments and feedback"
+      },
+      "smallBatches": {
+        "title": "Small Batches",
+        "description": "Personal attention for every student"
+      }
+    }
+  },
+  "about": {
+    "heading": "About Us",
+    "lead": "Expert coaching by BUETian teachers for higher-class science students.",
+    "description": "BUETian Science is a specialized coaching center run by BUET teachers, designed exclusively for science students. We focus on building strong concepts, improving problem-solving abilities, and developing analytical thinking—from basics to advanced problems.",
+    "benefits": [
+      "Build strong concepts",
+      "Improve problem-solving skills",
+      "Develop analytical thinking",
+      "From basics to advanced problems"
+    ]
+  },
+  "courses": {
+    "heading": "Courses & Programs",
+    "subjects": ["Physics", "Chemistry", "Mathematics"],
+    "levels": "Class 8 to Intermediate First Year",
+    "track": ["Concept → Practice", "Mock Exams → Feedback"],
+    "info": "Regular tests & mock exams with feedback",
+    "foundation": {
+      "title": "Foundation",
+      "description": "Building strong fundamentals and basic concepts"
+    },
+    "advanced": {
+      "title": "Advanced",
+      "description": "Complex problems and higher-level understanding"
+    },
+    "examPrep": {
+      "title": "Exam Prep",
+      "description": "Mock tests and exam-focused practice"
+    }
+  },
+  "testimonials": {
+    "heading": "What Students Say",
+    "subheading": "Success Stories from Our Students",
+    "studentsMentored": "Students Mentored"
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Ready to start your journey? Contact us today!",
+    "addressLabel": "Address",
+    "addressValue": "48/48/2, Moneshwar Road, Hazaribagh (Beside Bitobi Furniture)",
+    "phoneLabel": "Phone",
+    "phoneValue": "+8801790394788",
+    "whatsappMessage": "I want to be admitted in Buetian Science"
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "questions": {
+      "whoTeaches": {
+        "q": "Who teaches the classes?",
+        "a": "All classes are taught by BUETian teachers with strong subject expertise and experience in coaching science students."
+      },
+      "mockTests": {
+        "q": "Do you run mock tests?",
+        "a": "Yes—we conduct regular tests, mock exams, and provide detailed feedback to track progress."
+      },
+      "batchSize": {
+        "q": "What is the batch size?",
+        "a": "We maintain small batch sizes to ensure personal attention for every student."
+      },
+      "levelsCovered": {
+        "q": "What levels do you cover?",
+        "a": "We teach students from Class 8 through Intermediate First Year (HSC First Year)."
+      },
+      "subjects": {
+        "q": "Which subjects are taught?",
+        "a": "We specialize in Physics, Chemistry, and Mathematics for science students."
+      }
+    }
+  },
+  "blog": {
+    "heading": "Blog & Resources",
+    "subheading": "Study Tips, Insights, and Educational Content",
+    "readTime": "min read",
+    "studyTip": "Study Tip"
+  },
+  "footer": {
+    "description": "Expert science coaching by BUETian teachers. Building strong concepts and analytical skills.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "followUs": "Follow Us",
+    "copyright": "© 2025 BUETian Science. All rights reserved."
+  }
+}
+

@@ -1,15 +1,212 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+html {
+  scroll-behavior: smooth;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+body {
+  margin: 0;
+  font-family: 'Inter', 'Noto Sans Bengali', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Swiper pagination customization */
+.swiper-pagination-bullet {
+  background: #1565C0;
+}
+
+.swiper-pagination-bullet-active {
+  background: #00BFA5;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #1565C0;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   2025 Animation Tokens & Variables
+   ============================================ */
+:root {
+  --animation-duration-fast: 250ms;
+  --animation-duration-base: 400ms;
+  --animation-duration-slow: 600ms;
+  --animation-easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --animation-easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --animation-translate-distance: 24px;
+  --animation-scale-subtle: 0.97;
+}
+
+/* ============================================
+   Native CSS Scroll-Linked Animations (2025)
+   Progressive enhancement for modern browsers
+   ============================================ */
+.reveal-scroll {
+  opacity: 0;
+  transform: translateY(var(--animation-translate-distance));
+  animation: fade-slide-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.reveal-scroll-scale {
+  opacity: 0;
+  transform: scale(var(--animation-scale-subtle));
+  animation: fade-scale-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+.reveal-scroll-left {
+  opacity: 0;
+  transform: translateX(calc(-1 * var(--animation-translate-distance)));
+  animation: fade-slide-left linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.reveal-scroll-right {
+  opacity: 0;
+  transform: translateX(var(--animation-translate-distance));
+  animation: fade-slide-right linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fade-slide-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-scale-in {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-slide-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-slide-right {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   View Transitions API Support (2025)
+   Cross-document navigation animations
+   ============================================ */
+@view-transition {
+  navigation: auto;
+}
+
+/* Smooth cross-fade for page transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--animation-duration-base);
+  animation-timing-function: var(--animation-easing-smooth);
+}
+
+::view-transition-old(root) {
+  animation-name: fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: fade-slide-up;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Named view transitions for hero elements */
+.view-transition-hero {
+  view-transition-name: hero;
+}
+
+.view-transition-title {
+  view-transition-name: title;
+}
+
+/* ============================================
+   Performance Optimizations
+   ============================================ */
+/* Promote animated elements to their own layer for smoother animation */
+.reveal-scroll,
+.reveal-scroll-scale,
+.reveal-scroll-left,
+.reveal-scroll-right {
+  content-visibility: auto;
+  contain: layout style paint;
+}
+
+/* Only use will-change on hover/active to avoid excessive layer promotion */
+.hover-lift:hover {
+  will-change: transform;
+  transform: translateY(-2px);
+  transition: transform var(--animation-duration-fast) var(--animation-easing-smooth);
+}
+
+/* ============================================
+   Respect prefers-reduced-motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* Disable scroll-linked animations */
+  .reveal-scroll,
+  .reveal-scroll-scale,
+  .reveal-scroll-left,
+  .reveal-scroll-right {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Disable view transitions */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
   }
 }
