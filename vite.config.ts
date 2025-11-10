@@ -5,9 +5,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   // Set base path for GitHub Pages
-  // For root domain (username.github.io), use base: '/'
-  // For repository (username.github.io/repo-name), use base: '/repo-name/'
-  base: process.env.GITHUB_ACTIONS ? '/buetianscience/' : '/',
+  // This is a <org>.github.io repository (root domain), so base should be '/'
+  base: '/',
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
   ssr: {
     noExternal: ['react-helmet-async'],

@@ -5,6 +5,6 @@ export default {
   // Server-side render by default, to enable SPA mode set this to `false`
   // Set to false for GitHub Pages static hosting
   ssr: false,
-  // Set basename for GitHub Pages subdirectory deployment
-  basename: process.env.GITHUB_ACTIONS ? '/buetianscience' : '/',
+  // This is a <org>.github.io repository (root domain), so basename should be '/'
+  basename: '/',
 } satisfies Config;
